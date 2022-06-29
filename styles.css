@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+   --Moderate-violet: hsl(263, 55%, 52%);
+   --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+   --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+   --White: hsl(0, 0%, 100%);
+   --Light-gray: hsl(0, 0%, 81%);
+   --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+   background-color: var(--Light-grayish-blue);
+}
+
+.container{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 4vh;
+   padding: 3vh;
+   padding-top: 6vh;
+   padding-bottom: 6vh;
+}
+
+.testimony{
+   padding: 4.5vh;
+   border-radius: 1.6vh;
+   display: flex;
+   flex-direction: column;
+   gap: 2vh;
+   box-shadow: 0 2px 12px 0 rgb(0, 0, 0, 0.15);
+   position: relative;
+}
+
+.testimony .pattern{
+   position: absolute;
+   right: 4.5vh;
+   top: 0;
+   z-index: 1;
+}
+
+.testimony .testimony_header{
+   z-index: 3;
+}
+
+.testimony .testimony_title{
+   z-index: 2;
+}
+
+.testimony:nth-child(1){
+   background-color: var(--Moderate-violet);
+}
+
+.testimony:nth-child(2){
+   background-color: var(--Very-dark-grayish-blue);
+}
+
+.testimony:nth-child(3){
+   background-color: var(--White);
+}
+
+.testimony:nth-child(4){
+   background-color: var(--Very-dark-blackish-blue);
+}
+
+.testimony:nth-child(5){
+   background-color: var(--White);
+}
+
+.testimony_header{
+   display: flex;
+   align-items: center;
+   gap: 2vh;
+}
+
+.testimony_header img{
+   width: 10vw;
+   border-radius: 50%;  
+}
+
+.testimony:nth-child(1) .testimony_header_text p:nth-child(1){
+   color: var(--Light-gray);
+}
+
+.testimony:nth-child(1) .testimony_header_text p:nth-child(2){
+   color: var(--Light-gray);
+   opacity: 50%;
+}
+
+.testimony:nth-child(2) .testimony_header_text p:nth-child(1){
+   color: var(--Light-gray);
+}
+
+.testimony:nth-child(2) .testimony_header_text p:nth-child(2){
+   color: var(--Light-gray);
+   opacity: 50%;
+}
+
+.testimony:nth-child(3) .testimony_header_text p:nth-child(1){
+   color: var(--Very-dark-grayish-blue);
+}
+
+.testimony:nth-child(3) .testimony_header_text p:nth-child(2){
+   color: var(--Very-dark-grayish-blue);
+   opacity: 50%;
+}
+
+.testimony:nth-child(4) .testimony_header_text p:nth-child(1){
+   color: var(--Light-gray);
+}
+
+.testimony:nth-child(4) .testimony_header_text p:nth-child(2){
+   color: var(--Light-gray);
+   opacity: 50%;
+}
+
+.testimony:nth-child(5) .testimony_header_text p:nth-child(1){
+   color: var(--Very-dark-grayish-blue);
+}
+
+.testimony:nth-child(5) .testimony_header_text p:nth-child(2){
+   color: var(--Very-dark-grayish-blue);
+   opacity: 50%;
+}
+
+/*? title and paragraph */
+.testimony_title{
+   font-weight: 600;
+   font-size: 16px;
+}
+
+.testimony_paragraph{
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.testimony:nth-child(1) .testimony_title{
+   color: var(--Light-grayish-blue);
+}
+
+.testimony:nth-child(1) .testimony_paragraph{
+   color: var(--Light-grayish-blue);
+   opacity: 50%;
+}
+
+.testimony:nth-child(2) .testimony_title{
+   color: var(--Light-grayish-blue);
+}
+
+.testimony:nth-child(2) .testimony_paragraph{
+   color: var(--Light-grayish-blue);
+   opacity: 50%;
+}
+
+.testimony:nth-child(3) .testimony_title{
+   color: var(--Very-dark-blackish-blue);
+}
+
+.testimony:nth-child(3) .testimony_paragraph{
+   color: var(--Very-dark-blackish-blue);
+   opacity: 50%;
+}
+
+.testimony:nth-child(4) .testimony_title{
+   color: var(--Light-grayish-blue);
+}
+
+.testimony:nth-child(4) .testimony_paragraph{
+   color: var(--Light-grayish-blue);
+   opacity: 50%;
+}
+
+.testimony:nth-child(5) .testimony_title{
+   color: var(--Very-dark-blackish-blue);
+}
+
+.testimony:nth-child(5) .testimony_paragraph{
+   color: var(--Very-dark-blackish-blue);
+   opacity: 50%;
+}
+
+
+@media (min-width: 800px){
+   body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .container{
+      width: 86vw;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+   }
+
+   .testimony .pattern{
+      top: 0;
+      right: 8vw;
+      z-index: 1;
+   }
+
+   .testimony_title{
+      font-size: 3vh;
+   }
+
+   .testimony:nth-child(1){
+      grid-column: 1/3;
+      grid-row: 1;
+   }
+   
+   .testimony:nth-child(3){
+      grid-column: 1;
+      grid-row: 2;
+   }
+   
+   .testimony:nth-child(4){
+      grid-column: 2/4;
+      grid-row: 2;
+   }
+   
+   .testimony:nth-child(5){
+      grid-column: 4;
+      grid-row: 1/3;
+   }
+
+   .testimony_header img{
+      width: 2.4vw;
+      border-radius: 50%;  
+   }
+
+   .testimony_header p{
+      font-size: 2vh;
+   }
+
+   .testimony_title{
+      font-size: 3vh;
+   }
+
+   .testimony_paragraph{
+      font-size: 2vh;
+   }
+}
